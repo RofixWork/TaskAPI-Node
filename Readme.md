@@ -80,17 +80,21 @@ This robust and simple API allows you to **create**, **read**, **update**, and *
 
 ### **1. Clone the repository**
 ```bash
-    git clone https://github.com/RofixWork/TaskAPI-Node
+git clone https://github.com/RofixWork/TaskAPI-Node 
+```
 
 ### **2. Define .env File**
 ```bash
-    touch .env
+touch .env
+```
 
 ### **3. Define Connection String**
 ```bash
-    MONGO_UR=connection_string_here
+MONGO_UR=connection_string_here
+```
 
 ### **4. Run Server**
 ```bash
-    npm start (node app)
-    npm run dev (nodemon app)
+npm start (node app)
+npm run dev (nodemon app)
+```
