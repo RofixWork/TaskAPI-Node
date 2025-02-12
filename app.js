@@ -7,6 +7,9 @@ const notFound = require('./middlewares/not-found');
 const errorHandler = require('./middlewares/errorHandler');
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUI = require('swagger-ui-express')
+const swaggerUiDist = require('swagger-ui-dist');
+
+const swaggerAssetsPath = swaggerUiDist.getAbsoluteFSPath();
 // swagegr js doc options
 /**
  * @type {import('swagger-jsdoc').Options} options
@@ -27,7 +30,7 @@ const options = {
 };
 const openapiSpecification = swaggerJsdoc(options);
 const app = express()
-
+app.use(express.static(swaggerAssetsPath));
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(openapiSpecification));
 
 app.use(express.json())
