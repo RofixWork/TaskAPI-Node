@@ -90,7 +90,8 @@ touch .env
 
 ### **3. Define Connection String**
 ```bash
-MONGO_UR=connection_string_here
+define #MONGO_URI=connection_string_here
+inside .env file
 ```
 
 ### **4. Run Server**
